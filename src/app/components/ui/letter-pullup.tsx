@@ -4,18 +4,13 @@ import { motion } from "framer-motion";
 
 import { cn } from "@/lib/utils";
 
-interface LetterPullupProps {
+interface LetterPullUpProps {
+  text: string;
   className?: string;
-  words: string;
-  delay?: number;
 }
 
-export default function LetterPullup({
-  className,
-  words,
-  delay,
-}: LetterPullupProps) {
-  const letters = words.split("");
+export const LetterPullUp: React.FC<LetterPullUpProps> = ({ text, className = '' }) => {
+  const letters = text.split("");
 
   const pullupVariant = {
     initial: { y: 100, opacity: 0 },
@@ -23,7 +18,7 @@ export default function LetterPullup({
       y: 0,
       opacity: 1,
       transition: {
-        delay: i * (delay ? delay : 0.05), // By default, delay each letter's animation by 0.05 seconds
+        delay: i * (0.05), // By default, delay each letter's animation by 0.05 seconds
       },
     }),
   };

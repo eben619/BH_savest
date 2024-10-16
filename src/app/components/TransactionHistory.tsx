@@ -105,10 +105,8 @@ export default function TransactionHistory({ account }: TransactionHistoryProps)
   };
 
   useEffect(() => {
-    if (account) {
-      fetchTransactions();
-    }
-  }, [account]);
+    fetchTransactions();
+  }, [account, fetchTransactions]);
 
   const toggleTransactionHistory = () => {
     setIsTransactionHistoryExpanded(!isTransactionHistoryExpanded);

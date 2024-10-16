@@ -29,7 +29,7 @@ export function CompoundInterestCalculator() {
 
   useEffect(() => {
     calculateCompoundInterest();
-  }, [initialDeposit, contributionAmount, contributionFrequency, yearsOfGrowth, estimatedReturn, compoundFrequency]);
+  }, [initialDeposit, contributionAmount, contributionFrequency, yearsOfGrowth, estimatedReturn, compoundFrequency, calculateCompoundInterest]);
 
   const calculateCompoundInterest = () => {
     const principal = parseFloat(initialDeposit);

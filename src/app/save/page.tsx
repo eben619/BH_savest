@@ -90,9 +90,9 @@ export default function SavePage() {
 
   useEffect(() => {
     if (isSignedIn) {
-      fetchUserSavings(); // Fetch user's savings once ETH price is available and user is signed in
+      fetchUserSavings();
     }
-  }, [ethPrice, isSignedIn]);
+  }, [ethPrice, isSignedIn, fetchUserSavings]);
 
   const handleDeposit = async () => {
     const amount = parseFloat(depositAmount);

@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 import { cn } from "@/lib/utils";
 
@@ -31,10 +31,10 @@ export function GridPattern({
   repeatDelay = 0.5,
   ...props
 }: GridPatternProps) {
-  const id = useId();
-  const containerRef = useRef(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [squares, setSquares] = useState(() => generateSquares(numSquares));
+  const id = React.useId();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [dimensions, setDimensions] = React.useState({ width: 0, height: 0 });
+  const [squares, setSquares] = React.useState(() => generateSquares(numSquares));
 
   function getPos() {
     return [

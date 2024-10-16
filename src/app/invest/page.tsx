@@ -88,7 +88,7 @@ export default function InvestPage() {
     if (isSignedIn) {
       fetchUserDeposit(); // Fetch user's deposit once Base Sepolia ETH price is available and user is signed in
     }
-  }, [ethPrice, isSignedIn]);
+  }, [ethPrice, isSignedIn, fetchUserDeposit]);
 
   const handleInvest = async () => {
     const amount = parseFloat(investAmount);

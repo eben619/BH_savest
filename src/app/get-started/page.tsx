@@ -93,7 +93,7 @@ function getStepContent(step: number): React.ReactNode {
       return (
         <>
           <p className="mb-4">
-            To transact using BlockHolder, you'll need a digital wallet. A wallet is your gateway to accessing decentralized applications and managing your funds securely. Choose one of the following options:
+            To transact using BlockHolder, you&apos;ll need a digital wallet. A wallet is your gateway to accessing decentralized applications and managing your funds securely. Choose one of the following options:
           </p>
           <ul className="list-disc pl-6 mb-4">
             <li className="mb-2">New User? Create a Wallet: Choose from popular wallet providers like Coinbase Wallet, MetaMask, Trust Wallet, or any Web3-compatible wallet of your choice.</li>

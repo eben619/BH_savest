@@ -38,7 +38,7 @@ export function StakingRewardCalculator() {
 
   useEffect(() => {
     calculateRewards();
-  }, [protocol, amount, duration, price, rewardRate]);
+  }, [protocol, amount, duration, price, rewardRate, calculateRewards]);
 
   const calculateRewards = () => {
     const amountNum = parseFloat(amount);
