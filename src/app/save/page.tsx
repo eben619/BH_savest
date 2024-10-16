@@ -313,7 +313,7 @@ export default function SavePage() {
                 </ShineBorder>
                 <div className="w-full md:w-1/2">
                   <Image
-                    src="/8596353.jpg"
+                    src="/hsssjj.jpg"
                     alt="Save with BlockHolder"
                     width={800}
                     height={600}

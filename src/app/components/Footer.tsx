@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 
-const navigation = [
+ const navigation = [
   
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Contact', href: '/contact' },
-]
+  { name: '', href: '/' },
+  { name: '', href: '/' },
+  { name: '', href: '/' },
+  { name: '', href: '/' },
+  { name: '', href: '/' },
+] 
 
 const socialLinks = [
   { name: 'Facebook', href: 'https://facebook.com', icon: Facebook },

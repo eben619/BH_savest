@@ -18,6 +18,7 @@ const navigation = [
   { name: 'Earn', href: '/earn' },
   { name: 'Learn', href: '/learn' },
   { name: 'Pricing', href: '/pricing' },
+  { name: 'Feedback', href: '/feedback' },
 ]
 
 export default function Header() {

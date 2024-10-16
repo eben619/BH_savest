@@ -498,7 +498,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">
+    <div className="flex flex-col min-h-screen bg-white">
       <Header />
 
       <main className="flex-grow container mx-auto px-4 py-12">
@@ -511,28 +511,28 @@ export default function PricingPage() {
           >
             <WordPullUp 
               words="Your Billing Dashboard"
-              className="text-5xl font-bold mb-6 text-center text-white"
+              className="text-5xl font-bold mb-6 text-center text-gray-800"
             />
-            <p className="text-xl mb-12 text-center text-purple-200">Manage your subscription and billing information, {user.firstName}.</p>
+            <p className="text-xl mb-12 text-center text-gray-600">Manage your subscription and billing information, {user.firstName}.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Current Plan Overview Card */}
               <MagicCard 
-                className="overflow-hidden backdrop-blur-lg bg-white/10"
-                gradientColor="rgba(139, 92, 246, 0.3)"
+                className="overflow-hidden backdrop-blur-lg bg-gray-100"
+                gradientColor="rgba(139, 92, 246, 0.1)"
               >
                 <CardHeader className="p-6">
-                  <CardTitle className="flex items-center text-2xl text-white">
-                    <Sparkles className="mr-2 text-yellow-400" /> Current Plan Overview
+                  <CardTitle className="flex items-center text-2xl text-gray-800">
+                    <Sparkles className="mr-2 text-yellow-600" /> Current Plan Overview
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <p className="text-3xl font-bold text-purple-300 mb-4">{billingData.currentPlan} Plan</p>
-                  <div className="space-y-2 text-purple-100">
+                  <p className="text-3xl font-bold text-purple-600 mb-4">{billingData.currentPlan} Plan</p>
+                  <div className="space-y-2 text-gray-700">
                     <p>Billing Cycle: <span className="font-semibold">{billingData.billingCycle}</span></p>
                     <p>Next Billing Date: <span className="font-semibold">{billingData.nextBillingDate}</span></p>
                     <p>Cost: <span className="font-semibold">${billingData.cost} per {billingData.billingCycle.toLowerCase()}</span></p>
-                    <p className="text-green-400 font-semibold">Status: {billingData.status}</p>
+                    <p className="text-green-600 font-semibold">Status: {billingData.status}</p>
                   </div>
                 </CardContent>
                 <CardFooter className="p-6">
@@ -589,15 +589,15 @@ export default function PricingPage() {
               </MagicCard>
 
               <MagicCard 
-                className="overflow-hidden backdrop-blur-lg bg-white/10"
-                gradientColor="rgba(139, 92, 246, 0.3)"
+                className="overflow-hidden backdrop-blur-lg bg-gray-100"
+                gradientColor="rgba(139, 92, 246, 0.1)"
               >
                 <CardHeader className="p-6">
-                  <CardTitle className="flex items-center text-2xl text-white">
+                  <CardTitle className="flex items-center text-2xl text-gray-800">
                     <AlertCircle className="mr-2" /> Usage Limits
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 text-purple-100">
+                <CardContent className="p-6 text-gray-700">
                   <div className="grid grid-cols-2 gap-6">
                     {Object.entries(billingData.usageLimits).map(([key, value]) => (
                       <TooltipProvider key={key}>
@@ -638,15 +638,15 @@ export default function PricingPage() {
               </MagicCard>
 
               <MagicCard 
-                className="overflow-hidden backdrop-blur-lg bg-white/10"
-                gradientColor="rgba(139, 92, 246, 0.3)"
+                className="overflow-hidden backdrop-blur-lg bg-gray-100"
+                gradientColor="rgba(139, 92, 246, 0.1)"
               >
                 <CardHeader className="p-6">
-                  <CardTitle className="flex items-center text-2xl text-white">
+                  <CardTitle className="flex items-center text-2xl text-gray-800">
                     <Calendar className="mr-2" /> Billing History
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 text-purple-100">
+                <CardContent className="p-6 text-gray-700">
                   {billingData.transactions.map((transaction, index) => (
                     <div key={index} className="flex justify-between items-center mb-2">
                       <span>{transaction.date}</span>
@@ -664,15 +664,15 @@ export default function PricingPage() {
               </MagicCard>
 
               <MagicCard 
-                className="overflow-hidden backdrop-blur-lg bg-white/10"
-                gradientColor="rgba(139, 92, 246, 0.3)"
+                className="overflow-hidden backdrop-blur-lg bg-gray-100"
+                gradientColor="rgba(139, 92, 246, 0.1)"
               >
                 <CardHeader className="p-6">
-                  <CardTitle className="flex items-center text-2xl text-white">
+                  <CardTitle className="flex items-center text-2xl text-gray-800">
                     <CreditCard className="mr-2" /> Payment Methods
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 text-purple-100">
+                <CardContent className="p-6 text-gray-700">
                   {billingData.paymentMethods.map((method, index) => (
                     <div key={index} className="flex justify-between items-center mb-2">
                       <span>{method.type} ending in {method.last4}</span>
@@ -735,15 +735,15 @@ export default function PricingPage() {
               </MagicCard>
 
               <MagicCard 
-                className="overflow-hidden backdrop-blur-lg bg-white/10"
-                gradientColor="rgba(139, 92, 246, 0.3)"
+                className="overflow-hidden backdrop-blur-lg bg-gray-100"
+                gradientColor="rgba(139, 92, 246, 0.1)"
               >
                 <CardHeader className="p-6">
-                  <CardTitle className="flex items-center text-2xl text-white">
+                  <CardTitle className="flex items-center text-2xl text-gray-800">
                     <Gift className="mr-2" /> Promotional Discounts
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 text-purple-100">
+                <CardContent className="p-6 text-gray-700">
                   <p>Enter a promo code to apply a discount to your next bill.</p>
                   <input
                     type="text"
@@ -757,15 +757,15 @@ export default function PricingPage() {
               </MagicCard>
 
               <MagicCard 
-                className="overflow-hidden backdrop-blur-lg bg-white/10"
-                gradientColor="rgba(139, 92, 246, 0.3)"
+                className="overflow-hidden backdrop-blur-lg bg-gray-100"
+                gradientColor="rgba(139, 92, 246, 0.1)"
               >
                 <CardHeader className="p-6">
-                  <CardTitle className="flex items-center text-2xl text-white">
+                  <CardTitle className="flex items-center text-2xl text-gray-800">
                     <Users className="mr-2" /> Referral Program
                   </CardTitle>
                 </CardHeader>
-                <CardContent className="p-6 text-purple-100">
+                <CardContent className="p-6 text-gray-700">
                   <p className="text-2xl font-bold mb-2">Earn Rewards</p>
                   <p className="mb-4">Share BlockHolder and earn rewards for each referral.</p>
                   <div className="space-y-2">
@@ -821,8 +821,8 @@ export default function PricingPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <Button variant="outline" className="mr-4 bg-white/10 text-white hover:bg-white/20">Cancel Subscription</Button>
-              <Button variant="outline" className="bg-white/10 text-white hover:bg-white/20">Pause Subscription</Button>
+              <Button variant="outline" className="mr-4 bg-red-100 text-red-600 hover:bg-red-200">Cancel Subscription</Button>
+              <Button variant="outline" className="bg-yellow-100 text-yellow-600 hover:bg-yellow-200">Pause Subscription</Button>
             </div>
           </motion.div>
         ) : (
@@ -835,9 +835,9 @@ export default function PricingPage() {
             >
               <WordPullUp 
                 words="Choose the Right Plan for You"
-                className="text-5xl font-bold mb-6"
+                className="text-5xl font-bold mb-6 text-gray-800"
               />
-              <p className="text-xl mb-8 text-muted-foreground">Unlock premium features and take control of your financial future.</p>
+              <p className="text-xl mb-8 text-gray-600">Unlock premium features and take control of your financial future.</p>
             </motion.section>
 
             <motion.section 
@@ -847,11 +847,11 @@ export default function PricingPage() {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               <div className="mx-auto max-w-2xl text-center lg:max-w-4xl mb-8">
-                <h2 className="text-base font-semibold leading-7 text-primary">Pricing</h2>
-                <p className="mt-2 text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+                <h2 className="text-base font-semibold leading-7 text-purple-600">Pricing</h2>
+                <p className="mt-2 text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl">
                   Simple pricing for everyone.
                 </p>
-                <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-muted-foreground">
+                <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600">
                   Choose an affordable plan that's packed with the best features for engaging your audience, creating customer loyalty, and driving financial growth.
                 </p>
               </div>
@@ -924,8 +924,8 @@ export default function PricingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <h2 className="text-4xl font-bold mb-2 text-center">FAQ</h2>
-              <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+              <h2 className="text-4xl font-bold mb-2 text-center text-gray-800">FAQ</h2>
+              <h3 className="text-3xl font-bold mb-8 text-center text-gray-700">Frequently Asked Questions</h3>
               <div className="max-w-3xl mx-auto">
                 {faqData.map((faq, index) => (
                   <FAQItem key={index} question={faq.question} answer={faq.answer} />
